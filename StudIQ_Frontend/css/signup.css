@@ -1,0 +1,138 @@
+/* Full moving gradient background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #f83600, #f9d423, #f83600, #f9d423); /* Orange → Yellow */
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Signup box (white card) */
+.signup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.signup-logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Inputs with icons */
+.input-group {
+  position: relative;
+  margin: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #f83600;
+}
+
+/* Checkbox */
+.checkbox {
+  text-align: left;
+  margin: 12px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(90deg, #f83600, #f9d423); /* Orange → Yellow */
+  border: none;
+  color: #fff;
+  padding: 12px;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Links inside card (e.g., Login) */
+.signup-box p a {
+  color: #000;          /* black by default */
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.signup-box p a:hover {
+  color: #f83600;       /* orange on hover */
+}
+
+/* Terms */
+.terms {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #000;          /* black text */
+  line-height: 1.4;
+}
+
+/* Terms links */
+.terms a {
+  color: #000;          /* black by default */
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.terms a:hover {
+  color: #f83600;       /* orange on hover */
+}
